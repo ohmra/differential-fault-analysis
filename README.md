@@ -34,3 +34,15 @@ In order to reduce the possible values for the key bytes, we rely on a different
 3 * δ = SBox−1[x6 ⊕ k6] ⊕ Sbox−1[x'6 ⊕ k6]
 2 * δ = SBox−1[x3 ⊕ k3] ⊕ Sbox−1[x'3 ⊕ k3]
 ```
+In which δ, k1..k15 are unknowns, and the xi (bytes of the non-faulty ciphertext) and x'i (bytes of the faulty ciphertext) are known. It should be noted that the multiplication used here is that of the finite field, the same one used in mixColumns.
+
+# Files 
+The ```dfa.c``` perfoms the differential fault analysis and the ```key_test.c``` to do AES-128 encryption and check if the provided key return the correct cipher text
+
+# In this example :
+Plaintext = 0x6cdf1e5651a1796b9b6b9ace431db598
+Ciphertext = 0xb344534e6711d484e265ca71b0c39be9
+Faulty Ciphertext = 0xd52c3494ae4c1bd9a7a7ce5c50ac3ecc
+KEY = { 0xd0, 0x31, 0x93, 0x17, 0xc7, 0x78, 0xa7, 0xf1, 0x80, 0xee, 0x31, 0x38, 0x95, 0x60, 0xc8, 0x60 }
+
+The search goes on for ~20 minutes
