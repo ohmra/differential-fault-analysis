@@ -41,8 +41,11 @@ The ```dfa.c``` perfoms the differential fault analysis and the ```key_test.c```
 
 # In this example :
 Plaintext = 0x6cdf1e5651a1796b9b6b9ace431db598
+
 Ciphertext = 0xb344534e6711d484e265ca71b0c39be9
+
 Faulty Ciphertext = 0xd52c3494ae4c1bd9a7a7ce5c50ac3ecc
+
 KEY = { 0xd0, 0x31, 0x93, 0x17, 0xc7, 0x78, 0xa7, 0xf1, 0x80, 0xee, 0x31, 0x38, 0x95, 0x60, 0xc8, 0x60 }
 
 The search goes on for ~20 minutes
